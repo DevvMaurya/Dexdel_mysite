@@ -1,0 +1,164 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Playfair Display', serif;
+    font-family: 'Poppins', sans-serif;
+    user-select: none;
+    color: whitesmoke;
+}
+body
+{
+    color: whitesmoke;
+    height: fit-content;
+    margin-left: 6vh;
+    margin-right: 6vh;
+    border: .01px solid transparent;
+    background-image: linear-gradient(rgb(67, 65, 65),#343333, rgb(26, 25, 25) );
+}
+body::-webkit-scrollbar
+{
+    background-color: #343333;
+    width: 10px;
+}
+body::-webkit-scrollbar-thumb
+{
+    background-color: rgb(32, 252, 179);
+    border-radius: 12px;
+}
+header
+{
+    /* border: 2px solid yellow; */
+    position:sticky;
+    top:3%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 5vh;
+    padding: 0 3%;
+    border-bottom:2px solid #D9D9D9;
+    /* background:linear-gradient(0deg,#34333351,#49474751); */
+}
+.menu
+{
+    color: whitesmoke;
+    cursor: pointer;
+}
+.text
+{
+    font-family:'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 600;
+    letter-spacing: .2vh;
+    font-size: 3.4vh;
+}
+.search
+{
+    height:40vh;
+    width: auto;
+    /* border: 2px solid white; */
+    display: flex;
+    align-items: end;
+    justify-content:center;
+}
+.ip
+{
+    /* border: 2px solid yellowgreen; */
+    width: 100%;
+    height: 8vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.ip #que
+{
+    width: 75vh;
+    padding: 1.2vh 2vh;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-right: 4px;
+    box-shadow: inset 6px 6px 6px 1px #D9D9D9;
+    font-weight: 600;
+    color: #343333;
+}
+.ip #que:focus
+{
+    color: whitesmoke;
+    background: transparent;
+    box-shadow: inset 6px 6px 6px 1px #494747;
+}
+#sbtn
+{
+    border-radius: 50%;
+    padding: 1.5vh;
+    cursor: pointer;
+    margin-left: 4px;
+    box-shadow: inset 6px 6px 6px 1px #D9D9D9;
+}
+#sbtn:active
+{
+    background: transparent;
+}
+.links
+{
+    /* border: 1px solid red; */
+    position: relative;
+    bottom: 0;
+    font-size: 2.2vh;
+    margin: 14vh 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.links label
+{
+    margin-bottom: 2vh;
+}
+#dexledlogo
+{
+    position: absolute;
+    top: 38%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 7.3vh;
+    font-weight: 600;
+}
+footer
+{
+    position: absolute;
+    bottom: 0;
+    right: 5%;
+    height: fit-content;
+    margin: 2px;
+    /* border: 0.01px solid goldenrod; */
+}
+
+.options
+{
+    position: absolute;
+    right: 6%;
+    padding: 1.2vh;
+    background-color: #343333;
+    margin-top: 1vh;
+    border: 0.01px solid rgb(41, 39, 39);
+    border-radius: 12px;
+    transition: 0.1s linear;
+    /* visibility: hidden; */
+    display: none;
+}
+.menu_toggle
+{
+    display: block;
+}
+.options li:hover
+{
+    transform: translateY(-5px);
+    cursor: pointer;
+}
+
+.mode
+{
+    color: #343333;
+    background: rgb(245, 237, 223);
+}
+

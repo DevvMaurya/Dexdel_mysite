@@ -1,0 +1,169 @@
+<!-- {% load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'Style/index.css' %}">
+    <link rel="stylesheet" href="{% static 'Style/search.css' %}">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins:wght@200&display=swap" rel="stylesheet">
+    <script src="{% static 'Script/index.js' %}" defer></script>
+</head>
+<body>
+    <header>
+        <div class="text">
+            <label>Dexdel</label>
+        </div>
+        <form action="search.html">
+            <div class="ip">
+                <input type="search" name="ask" id="que" required placeholder="Search dev for" value="{{ask}}">
+                <input type="submit" value="🔍" id="sbtn">
+            </div>
+        </form>
+        <div class="menu">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAABUklEQVR4nO2ZTU7DMBCFveoxCmehhasRLsDP5VpKaVm8l3FhXcnIoSJWFRZ2Eger80lZZjzP48nIL8YoiqL8a6y110K+CLCtgaOQbsyn9msAWyGfReSqV/Ik74T8Gjtp+esBPkku++z8dMmzFSEi82gBzbFpy7qywI1zbmZGxjk3s8CiBtaBkKfoQKdz2ATwyZvMWGARVGETHSBs2Bw7f45fM2xsE0t4DhMXfxByL+ROyCplE6RHDr1e9gl3NGRVkoB9h4CPkgTsOj6H76UfofucOZgBmrg6VaK8Jh4KUQG80Ao4HWQ/6CATHWTUQSY6yHiBc2AoRAcZ9Ubm9EZGvZGxzBtZXbyxBbxNaS2SXAYCXqMDNP58G2DtA+Yyd0nenpm7j9GB/M+Fxtqe3l4/JNnrv2WcUgRw8C51UvJBJea+hN7izviLadOsmbrziqIoJhffwoxYhG/cxa8AAAAASUVORK5CYII=" width="42" onclick="ShowMenu()">
+            <div class="options" id="options">
+                <li>📞 Contact</li>
+                <li>🧑🏽‍💻 Code</li>
+                <li onclick="thememode()"><span id="mode">🌙 </span>Theme</li>
+            </div>
+        </div>
+    </header>
+    <section id="results-grid">
+        {%if not bool %}
+            <h1 style="width:50%;
+            position:relative;
+            padding:2vh;
+            border:2px solid red;
+            margin-bottom:5vh;
+            border-radius:12px">No Match Found..! >>> {{ask}} <br><h4>Explore more..</h4></h1>
+        {% endif %}
+
+        {% if bool %}
+        <div class="pic-info">
+            <div class="image">
+                <img src="{% static '/imgs/dev.jpg' %}" alt="dev-img">
+            </div>
+            <div class="info">
+                <p>Dev Vijaykumar Maurya. <br><br>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa omnis, beatae voluptatibus cupiditate voluptate odio reprehenderit natus. Beatae aliquid nobis quia! Consequatur doloribus facere ipsum consectetur fugit hic! Iusto, amet!</p>
+            </div>
+        </div>
+        {% endif %}
+
+        
+        <div class="info-links">
+            {% for i in "123467891011" %}
+             {{link|safe}}
+            {% endfor %}
+            
+        </div>
+    </section>
+</body>
+</html> -->
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <title>Document</title> -->
+    <link rel="stylesheet" href="{% static 'Style/index.css' %}">
+    <link rel="stylesheet" href="{% static 'Style/search.css' %}">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins:wght@200&display=swap"
+        rel="stylesheet">
+    <script src="{% static 'Script/index.js' %}" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="text">
+            <label style="cursor: pointer;" id="home">Dexdel</label>
+        </div>
+        <form action="search.html" method="GET" class="ip">   
+            <div class="ip">
+                <input type="search" name="ask" id="que" required placeholder="Search dev for" value="{{ask}}">
+                <input type="submit" value="🔍" id="sbtn">
+            </div>
+        </form> 
+        <div class="menu">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAABUklEQVR4nO2ZTU7DMBCFveoxCmehhasRLsDP5VpKaVm8l3FhXcnIoSJWFRZ2Eger80lZZjzP48nIL8YoiqL8a6y110K+CLCtgaOQbsyn9msAWyGfReSqV/Ik74T8Gjtp+esBPkku++z8dMmzFSEi82gBzbFpy7qywI1zbmZGxjk3s8CiBtaBkKfoQKdz2ATwyZvMWGARVGETHSBs2Bw7f45fM2xsE0t4DhMXfxByL+ROyCplE6RHDr1e9gl3NGRVkoB9h4CPkgTsOj6H76UfofucOZgBmrg6VaK8Jh4KUQG80Ao4HWQ/6CATHWTUQSY6yHiBc2AoRAcZ9Ubm9EZGvZGxzBtZXbyxBbxNaS2SXAYCXqMDNP58G2DtA+Yyd0nenpm7j9GB/M+Fxtqe3l4/JNnrv2WcUgRw8C51UvJBJea+hN7izviLadOsmbrziqIoJhffwoxYhG/cxa8AAAAASUVORK5CYII="
+                width="42" onclick="ShowMenu()">
+            <div class="options" id="options">
+                <li>📞 Contact</li>
+                <li>🧑🏽‍💻 Code</li>
+                <li onclick="thememode()"><span id="mode">🌙 </span>Theme</li>
+            </div>
+        </div>
+    </header>
+    <section id="results-grid">
+        {%if not bools %}
+        <h1 style="width:50%;
+        position:relative;
+        padding:2vh;
+        border:2px solid red;
+        margin-bottom:5vh;
+        border-radius:12px">No Match Found..! >>> {{ask}} <br>
+            <h4>Explore more..</h4>
+        </h1>
+        {% endif %}
+
+
+        {% if boold %}
+        <div class="pic-info">
+            <div class="image">
+                <img src="{% static '/imgs/dev.jpg' %}" alt="dev-img">
+            </div>
+            <div class="info">
+                <p>Dev Vijaykumar Maurya. <br><br>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa omnis, beatae voluptatibus
+                    cupiditate voluptate odio reprehenderit natus. Beatae aliquid nobis quia! Consequatur doloribus
+                    facere ipsum consectetur fugit hic! Iusto, amet!</p>
+            </div>
+        </div>
+        {% endif %}
+
+        {% if boolc %}
+        <div class="pic-info">
+            <div class="image">
+                <img src="{% static '/imgs/scet_college.png' %}" alt="dev-img">
+            </div>
+            <div class="info">
+                <p>Sarvajanki College of Engineering Technology  <br><br>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa omnis, beatae voluptatibus
+                    cupiditate voluptate odio reprehenderit natus. Beatae aliquid nobis quia! Consequatur doloribus
+                    facere ipsum consectetur fugit hic! Iusto, amet!</p>
+            </div>
+        </div>
+        {% endif %}
+
+        <div class="info-links">
+
+            <!-- {% for lnk in link %}
+            {{ lnk | safe }}
+            {% endfor %} -->
+            
+            <!-- {% for i in '12345'%}
+            {{link.0 | safe}}
+            {% endfor %} -->
+
+            {% for lk in link %}
+            <div class="link">
+                <h3><a href="{{lk.2}}">{{lk.1}}</h3>
+                <p>{{lk.3}}</p></a>
+            </div>
+            {% endfor %}
+
+
+        </div>
+    </section>
+</body>
+
+</html>

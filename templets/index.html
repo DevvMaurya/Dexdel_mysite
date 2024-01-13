@@ -1,0 +1,51 @@
+{%load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'Style/index.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins:wght@200&display=swap" rel="stylesheet">
+    <script src="{% static 'Script/index.js' %}" defer></script>
+    <title>Dexdel</title>
+</head>
+<body>
+    <header>
+        <div class="text">
+            <label>Dexdel</label>
+        </div>
+        <div class="menu">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAABUklEQVR4nO2ZTU7DMBCFveoxCmehhasRLsDP5VpKaVm8l3FhXcnIoSJWFRZ2Eger80lZZjzP48nIL8YoiqL8a6y110K+CLCtgaOQbsyn9msAWyGfReSqV/Ik74T8Gjtp+esBPkku++z8dMmzFSEi82gBzbFpy7qywI1zbmZGxjk3s8CiBtaBkKfoQKdz2ATwyZvMWGARVGETHSBs2Bw7f45fM2xsE0t4DhMXfxByL+ROyCplE6RHDr1e9gl3NGRVkoB9h4CPkgTsOj6H76UfofucOZgBmrg6VaK8Jh4KUQG80Ao4HWQ/6CATHWTUQSY6yHiBc2AoRAcZ9Ubm9EZGvZGxzBtZXbyxBbxNaS2SXAYCXqMDNP58G2DtA+Yyd0nenpm7j9GB/M+Fxtqe3l4/JNnrv2WcUgRw8C51UvJBJea+hN7izviLadOsmbrziqIoJhffwoxYhG/cxa8AAAAASUVORK5CYII=" width="42" onclick="ShowMenu()">
+            <div class="options" id="options">
+                <li>📞 Contact</li>
+                <li>🧑🏽‍💻 Code</li>
+                <li onclick="thememode()"><span id="mode">🌙 </span>Theme</li>
+            </div>
+        </div>
+    </header>
+    <form action="search.html">
+        <label id="dexledlogo">Dexdel</label>
+        <div class="search">
+            <div class="ip">
+                <input type="search" name="ask" id="que" required placeholder="Search dev for">
+                <input type="submit" value="🔍" id="sbtn">
+            </div>
+        </div>
+    </form>
+        <div class="links">
+            <label for="">Suggestions</label>
+            <a href="search.html?ask=Python+Developer">Python Developer</a>
+            <a href="search.html?ask=Data+analytics">Data analytics</a>
+            <a href="search.html?ask=A.I+Engineer">A.I Engineer</a>
+            <a href="more.html" style="margin-top: 2vh; color:rgb(121, 162, 250)">more</a>
+        </div>
+    <footer>
+        <div class="creater" >
+            <label for="" style="cursor: pointer;" onclick="linkden()">Developer : Dev Maurya 😉</label>
+        </div>
+    </footer>
+</body>
+
+</html>
